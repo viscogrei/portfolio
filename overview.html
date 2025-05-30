@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PersonalPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1b1269148a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="img-div">
+                   <img src="images/Viscogrey.PNG"  class="logo"> 
+                </div>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> Fullstack Developer</p>
+                <h1>
+                    Hi, i'm
+                    <span class="highlight">Victor</span><br/>
+                    <span class="highlight">Green</span>
+                    from Nigeria
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+         <div class="container-2">
+            <div class="row">
+                <div class="about-col-1"><img src="images/vicBg.png" alt=""></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="MyAbout">
+                        I, Victor Green a skilled and experienced developer, i work on applications that has to do basically with the javascript programming language.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link"  onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents tabcontents__active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Back-end</span><br/>Building API's in a logical way, through the use of the REST Architecture.
+                            </li>
+                            <li>
+                                <span>Manipulating DOM</span><br/>Handling event listeners and also delegating events on the front-end.
+                            </li>
+                            <li>
+                                <span>Rendering</span><br/>Convert a static webpage, to include click events using request and response lifecycle.
+                            </li>
+                            <li>
+                                <span>Authentication & Authorization</span><br/>Handle users resource, e.g login, logout, signup and many more.
+                            </li>
+                            <li>
+                                <span>Image Manipulation</span><br/>Allow, Process and manipulate images with nodeJs.
+                            </li>
+                            <li>
+                                <span>Git & GitHub</span><br/>Set up Github and and push branch to remote branch on GitHub.
+                            </li>
+                            <li>
+                                <span>Reading & Writing Files</span>I will Prepare script that'll load json data from the file system to database<br/>
+                            </li>
+                            <li>
+                                <span>Refactor written codes to fit in for MVC(Model View Controllers) system</span><br/>Restructure unstructured codes, breaking them into models(mongoDb schemas), views(templates) and controllers(back-end functionalities).
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>[2023-2024]</span><br/>Acquired practical skill of building a fullstack application from start to complete finish on the udemy course by Jonas schmedtmann as instructor for a period of 1 year</li>
+                            <li><span>[2024]</span><br/>Early part of the year, implemented event listeners and delegations to click functionalities in front end applications</li>
+                            <li><span>[2024]</span><br/>Implemented lazy loading images,smooth scroll functionality and slider components to front end applicatioons</li>
+                            <li><span>[2022]</span><br/>Built two page application of products and product details</li>
+                            <li><span>[2025]</span><br/>With the good understanding and knowledge of html, css, DOM(Document Object Model), built a nice and responsive portfolio of myself</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                          <li><span>Complete javascript course at udemy by Jonas schmedtmann</span>(2021-2022) <a href="">View Certificate</a></li>
+                          <li><span>The complete Bootcamp, Node,js, express, MongoDB & More by Jonas schmedtmann</span>(2023 - 2024)  <a href="images/NodeJsCert.pdf">View Certificate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div id="services">
+        <div class="container swiper">
+            <!-- <div class=" swiper"> -->
+            <h1 class="sub-title">My Services</h1>
+            <div class="slider-wrapper">
+                <div class="services-list swiper-wrapper">
+                    <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-brands fa-codepen"></i>
+                        <h2>BackEnd API's</h2>
+                        <p>Build a nice data structure and construct API's (such as: put, patch, get, delete) in a logical way using the REST syntax </p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                        
+                    </div>
+                    <div class="card-item swiper-slide errors"  data-tilt>
+                        <i class="fa-solid fa-bug"></i>
+                        <h2>Handle errors and error messages with express</h2>
+                        <p2>I will create functions with express, to handle errors such as unhandled routes, uncaught exceptions, unhandled rejections, and errors caused by mongoose such as invalid id's and validation errors, etc.</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div>
+                    <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Authentication and Authorization</h2>
+                        <p>Build a workflow of signing up, logging in users and allowing them interact with certain protected resource that non-logged in users can get access to</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div> 
+                    <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Reading and Writing files</h2>
+                        <p>I will implement functionalities that will read and write large files from the file system to a database</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div> 
+                    <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Rendering</h2>
+                        <p>I will render your Api's from back-end to frontend(client side), using template engines like pug, etc</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div> 
+
+                    <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Aggregation pipeline</h2>
+                        <p>using concept of aggregation pipeline to do statistics calculation of datas from documents.</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div> 
+                    <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-solid fa-user"></i>
+                        <h2>API Features</h2>
+                        <p>Use javascript expressions with mongodb to perform  operations such as sorting, filtering, pagination, field Limiting, etc to API's.</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div> 
+                     <div class="card-item swiper-slide"  data-tilt>
+                        <i class="fa-solid fa-user"></i>
+                        <h2>MongoDB & Mongoose</h2>
+                        <p>I will create hosted database on atlas, compass, and connect this hosted database through drivers to an express app.</p>
+                        <a href="#" class="btn--show-modal">Learn more</a>
+                    </div> 
+                  
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+         
+            </div>
+           
+        </div>
+    </div>
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+       <!-- IMPLEMENT THE SLIDER FUNCTIONALITY FOR PROJECTS -->
+
+       <div class="slider">
+        <div class="slide projectsOverview">
+            <h1>Natours API</h1>
+            <p>Applied functionalities to a static looking webpage with with requests and responses being handled on the clients and server side through the use of frameworks and packages such as express, mongoDb, pug, etc..</p>
+            <img src="images/img-2.jpg" alt="photo 1" class="project__photo" />
+            <h6 class="project__details"><a href="#">More Details</a></h6>
+        </div>
+        <div class="slide projectsOverview">
+            <h1>Bankist Website</h1>
+            <p>Through the DOM, implemented event listeners, delegations, sliders, etc..</p>
+            <img src="images/img-3.jpg" alt="photo 2" class="project__photo" />
+            <h6 class="project__details"><a href="#">More Details</a></h6>
+        </div>
+        <div class="slide projectsOverview">
+            <h1>Portfolio Website</h1>
+            <p>Built a portfolio website of myself using html, css, javascript and backend frameworks.</p>
+            <img src="images/img-4.jpg" alt="photo 2" class="project__photo" />
+            <h6 class="project__details"><a href="#">More Details</a></h6>
+        </div>
+        <div class="slide projectsOverview">
+            <h1>Interior Decor</h1>
+            <p>With the help of front-end plugins like tilt.Js, some css keyframes, css 3D, etc. Created static website for a company pertaining interior design</p>
+            <img src="images/img-4.jpg" alt="photo 2" class="project__photo" />
+            <h6 class="project__details"><a href="#">More Details</a></h6>
+        </div>
+        <div class="slide projectsOverview">
+            <h1>FruitStore</h1>
+            <p>A website of products(Fruits) and their details, created with a quick servers,using pure vanilla javascript to render contents.</p>
+            <img src="images/img-4.jpg" alt="photo 2" class="project__photo" />
+            <h6 class="project__details"><a href="#">More Details</a></h6>
+        </div>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+        </div>
+      </div>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope-open-text"></i>greenvictor207@gmail.com</p>
+                <p><i class="fa-solid fa-phone-arrow-up-right"></i>+234 7063266409</p>
+                <div class="social-icons">
+                    <a href="" class="fa-brands fa-facebook"></a>
+                    <a href="" class="fa-brands fa-x-twitter"></a>
+                    <a href="" class="fa-brands fa-square-ig"></a>
+                    <a href="" class="fa-brands fa-linkedin"></a>
+                </div>
+                <a href="images/MyCv.docx" download class="btn btn_2">Download Cv</a>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn_2">Submit</button>
+                </form> 
+            </div>
+        </div>
+      </div>
+     
+    </div>
+    <div id="copyright">
+        <div class="copyright">
+            <p>Functional and responsive portfolio 🛠️,I'm Open at all times for inquiries and reviews 📳. Messages or calls directly to my Whatsapp number above is completely accepted ☎️, You can aswell send me mails at my address above.</p>
+          </div>
+    </div>
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">The video from capcut</h2>
+        <div class="video-wrapper">
+             <video class="video" src="images/Vid4Services.mp4" controls></video>
+             <div class="controls">
+                <div class="video-bar-wrapper">
+                    <div class="video-bar"></div>
+                </div>
+                <div class="buttons">
+                    <button>
+                        <i class="far fa-play-circle"></i>
+                    </button>
+                </div>
+             </div>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+    <script src="tilt.js"></script>
+</body>
+</html>
